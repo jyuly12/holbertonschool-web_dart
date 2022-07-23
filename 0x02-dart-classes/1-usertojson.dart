@@ -1,10 +1,13 @@
 class User{
-  String name;
-  int age;
-  double height;
+  String name = '';
+  int age = 0;
+  double height = 0;
   
-  User({required this.name, required this.age, required this.height});
-
+  User({name: String, age: int, height: double}){
+    this.name = name;
+    this.age = age;
+    this.height = height;
+  }
   Map<String, dynamic> toJson(){
     return{
       'name': name,
